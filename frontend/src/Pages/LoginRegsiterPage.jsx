@@ -296,26 +296,6 @@ const LoginRegister = ({ onLogin }) => {
                         : "Already have an account? Login"}
                 </button>
             </div>
-
-            {/* Display debug info */}
-            <div className="mt-6 pt-4 border-t">
-                <h3 className="font-bold mb-2">Debug Info:</h3>
-                <p className="text-sm text-gray-600 mb-1">
-                    Token: {localStorage.getItem('token') ? '✓ Stored' : '✗ Not stored'}
-                </p>
-                <p className="text-sm text-gray-600">
-                    User: {localStorage.getItem('userEmail') || 'Not logged in'}
-                </p>
-                <button
-                    onClick={() => {
-                        localStorage.clear();
-                        window.location.reload();
-                    }}
-                    className="mt-2 text-xs text-red-500 hover:text-red-700"
-                >
-                    Clear LocalStorage
-                </button>
-            </div>
         </div>
     );
 };
